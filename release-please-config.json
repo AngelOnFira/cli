@@ -1,6 +1,7 @@
 {
+	"plugins": ["cargo-workspace"],
 	"packages": {
-		"cli": {
+		".": {
 			"release-type": "rust",
 			"changelog-path": "/CHANGELOG.md"
 		}
