@@ -1,6 +1,6 @@
 {
 	"packages": {
-		"cli/Cargo.toml": {
+		"cli": {
 			"release-type": "rust",
 			"changelog-path": "CHANGELOG.md"
 		}
