@@ -56,16 +56,16 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
 
-  debug-outputs:
-    runs-on: ubuntu-latest
-    needs:
-      - release-please
-    steps:
-      - name: Debug outputs
-        run: |
-          echo "release_created=${{ needs.release-please.outputs.release_created }}"
-          echo "tag_name=${{ needs.release-please.outputs.tag_name }}"
-          echo "release_sha=${{ needs.release-please.outputs.release_sha }}"
+  # debug-outputs:
+  #   runs-on: ubuntu-latest
+  #   needs:
+  #     - release-please
+  #   steps:
+  #     - name: Debug outputs
+  #       run: |
+  #         echo "release_created=${{ needs.release-please.outputs.release_created }}"
+  #         echo "tag_name=${{ needs.release-please.outputs.tag_name }}"
+  #         echo "release_sha=${{ needs.release-please.outputs.release_sha }}"
 
   # Run 'cargo dist plan' (or host) to determine what tasks we need to do
   plan:
