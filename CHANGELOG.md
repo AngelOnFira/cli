@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 (2024-05-27)
+
+
+### Features
+
+* add opengb db command passthrough ([#216](https://github.com/AngelOnFira/cli/issues/216)) ([7b78870](https://github.com/AngelOnFira/cli/commit/7b788705687bd98387380e785614dbcc8c1190dd))
+* add passthrough env var ([#231](https://github.com/AngelOnFira/cli/issues/231)) ([2fc3021](https://github.com/AngelOnFira/cli/commit/2fc30210e63e0230f88c9a7e04b54a66bb385fab))
+* add support for sh and url db commands ([#217](https://github.com/AngelOnFira/cli/issues/217)) ([bbeeaba](https://github.com/AngelOnFira/cli/commit/bbeeaba7245839047c02f1f461869ab8c434e0ba))
+* Implement OpenGB related commands ([#215](https://github.com/AngelOnFira/cli/issues/215)) ([ce57364](https://github.com/AngelOnFira/cli/commit/ce57364d138d80ea48902733df1b3f796d51cd05))
+
+
+### Bug Fixes
+
+* add concurrency constraint to generated github action ([#226](https://github.com/AngelOnFira/cli/issues/226)) ([8a62d97](https://github.com/AngelOnFira/cli/commit/8a62d97bcea701983df02502f801d4ca8f403eef))
+* **backend:** check opengb and deno installation using which crate ([#237](https://github.com/AngelOnFira/cli/issues/237)) ([64b3489](https://github.com/AngelOnFira/cli/commit/64b3489f61206f58299cff59a5583c45b4663bac))
+* cdn.build_env not working ([#208](https://github.com/AngelOnFira/cli/issues/208)) ([214fe29](https://github.com/AngelOnFira/cli/commit/214fe297e612f6e88d06df7f57041be06f44949d))
+* **ci:** update ci script to use json-compact instead of json ([#224](https://github.com/AngelOnFira/cli/issues/224)) ([2f04ea3](https://github.com/AngelOnFira/cli/commit/2f04ea3c0639065a10f4b2ecbf4cfc2bf587f353))
+* rivet exec does not work with --rivet-servers ([#220](https://github.com/AngelOnFira/cli/issues/220)) ([c1d33c5](https://github.com/AngelOnFira/cli/commit/c1d33c5e251d29edd270d9a84a05d37fe39357ee))
+* temp disable flakey macos test ([#212](https://github.com/AngelOnFira/cli/issues/212)) ([6d1ed9b](https://github.com/AngelOnFira/cli/commit/6d1ed9b87b7aa9cdc249a895c7d5ea47ef9d5be7))
+* **test:** update region names ([#223](https://github.com/AngelOnFira/cli/issues/223)) ([c605561](https://github.com/AngelOnFira/cli/commit/c605561bdf4b4206b0f367f7dc5e716f1f0f5f76))
+* update cargo-release version ([450d25b](https://github.com/AngelOnFira/cli/commit/450d25b060da494a6ec44990b7575772e765db3e))
+* update sdks for opengb ([#233](https://github.com/AngelOnFira/cli/issues/233)) ([7feb70b](https://github.com/AngelOnFira/cli/commit/7feb70b2056d96ac31a69102d8a172ad6c0e0905))
+* update sentry issue url ([#210](https://github.com/AngelOnFira/cli/issues/210)) ([2b928df](https://github.com/AngelOnFira/cli/commit/2b928dfc38f18e7f33865bf8c76614c88c8ce384))
+* **upload:** increase upload buffer size ([#229](https://github.com/AngelOnFira/cli/issues/229)) ([28d9d93](https://github.com/AngelOnFira/cli/commit/28d9d93a9e7d6df959fa2a731c7433febfbe47b0))
+
 ## [v1.1.0] - 2024-04-13
 
 ### Added
