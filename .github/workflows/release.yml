@@ -15,6 +15,7 @@ name: Release
 
 permissions:
   contents: write
+  pull-requests: write
 
 # This task will run whenever you push a git tag that looks like a version
 # like "1.0.0", "v0.1.0-prerelease.1", "my-app/0.1.0", "releases/v1.0.0", etc.
@@ -39,14 +40,38 @@ permissions:
 # will be marked as a prerelease.
 on:
   push:
-    tags:
-      - '**[0-9]+.[0-9]+.[0-9]+*'
-  pull_request:
+    branches:
+      - main
 
 jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      release_sha: ${{ steps.release.outputs.sha }}
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+
+  debug-outputs:
+    runs-on: ubuntu-latest
+    needs:
+      - release-please
+    steps:
+      - name: Debug outputs
+        run: |
+          echo "release_created=${{ needs.release-please.outputs.release_created }}"
+          echo "tag_name=${{ needs.release-please.outputs.tag_name }}"
+          echo "release_sha=${{ needs.release-please.outputs.release_sha }}"
+
   # Run 'cargo dist plan' (or host) to determine what tasks we need to do
   plan:
     runs-on: ubuntu-latest
+    needs: release-please
+    if: needs.release-please.outputs.release_created == 'true'
     outputs:
       val: ${{ steps.plan.outputs.manifest }}
       tag: ${{ !github.event.pull_request && github.ref_name || '' }}
@@ -250,11 +275,18 @@ jobs:
         run: |
           # Remove the granular manifests
           rm -f artifacts/*-dist-manifest.json
-      - name: Create Github Release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ needs.plan.outputs.tag }}
-          name: ${{ fromJson(needs.host.outputs.val).announcement_title }}
-          body: ${{ fromJson(needs.host.outputs.val).announcement_github_body }}
-          prerelease: ${{ fromJson(needs.host.outputs.val).announcement_is_prerelease }}
-          artifacts: "artifacts/*"
+      # This section is removed from what comes in the generated cargo-dist CI
+      # file since release-please already creates a release. Instead, artifacts
+      # are uploaded in the next step.
+      # - name: Create Github Release
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: ${{ needs.plan.outputs.tag }}
+      #     name: ${{ fromJson(needs.host.outputs.val).announcement_title }}
+      #     body: ${{ fromJson(needs.host.outputs.val).announcement_github_body }}
+      #     prerelease: ${{ fromJson(needs.host.outputs.val).announcement_is_prerelease }}
+      #     artifacts: "artifacts/*"
+      - name: Upload Release Artifact
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ needs.plan.outputs.tag }} artifacts/*
