@@ -2,7 +2,7 @@
 	"packages": {
 		"cli": {
 			"release-type": "rust",
-			"changelog-path": "CHANGELOG.md"
+			"changelog-path": "../CHANGELOG.md"
 		}
 	},
 	"changelog-sections": [
