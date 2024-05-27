@@ -1,8 +1,8 @@
 {
-	"plugins": ["cargo-workspace"],
 	"packages": {
-		".": {
-			"release-type": "rust"
+		"cli/Cargo.toml": {
+			"release-type": "rust",
+			"changelog-path": "CHANGELOG.md"
 		}
 	},
 	"changelog-sections": [
