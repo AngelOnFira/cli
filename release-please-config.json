@@ -1,13 +1,9 @@
 {
-	// "plugins": ["cargo-workspace"],
 	"commit-search-depth": 50,
-	// At some point, this might be a good idea to enable
-	// "draft": true,
 	"packages": {
 		"cli": {
 			"release-type": "rust",
 			"changelog-path": "/CHANGELOG.md"
-			// "pull-request-title-pattern": "chore: release cli version ${version}"
 		}
 	},
 	"changelog-sections": [
