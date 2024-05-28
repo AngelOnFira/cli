@@ -5,6 +5,71 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0](https://github.com/AngelOnFira/cli/compare/v1.0.0...v1.1.0) (2024-05-28)
+
+
+### Features
+
+* add full release ([beeacd3](https://github.com/AngelOnFira/cli/commit/beeacd3c0cc0fec9e51145faa6897a9a30db8b70))
+* add opengb db command passthrough ([#216](https://github.com/AngelOnFira/cli/issues/216)) ([7b78870](https://github.com/AngelOnFira/cli/commit/7b788705687bd98387380e785614dbcc8c1190dd))
+* add passthrough env var ([#231](https://github.com/AngelOnFira/cli/issues/231)) ([2fc3021](https://github.com/AngelOnFira/cli/commit/2fc30210e63e0230f88c9a7e04b54a66bb385fab))
+* add release plz ([09ae34f](https://github.com/AngelOnFira/cli/commit/09ae34f12cc7c4d140c776ba743a3fb7c6dd9eed))
+* add support for sh and url db commands ([#217](https://github.com/AngelOnFira/cli/issues/217)) ([bbeeaba](https://github.com/AngelOnFira/cli/commit/bbeeaba7245839047c02f1f461869ab8c434e0ba))
+* fix path ([4256be3](https://github.com/AngelOnFira/cli/commit/4256be360ba8e8b6f288b32b382003f18dc3eb03))
+* Implement OpenGB related commands ([#215](https://github.com/AngelOnFira/cli/issues/215)) ([ce57364](https://github.com/AngelOnFira/cli/commit/ce57364d138d80ea48902733df1b3f796d51cd05))
+* just release pr ([9dee157](https://github.com/AngelOnFira/cli/commit/9dee157d88cae3e0fca3aa7183fcd73758a9989c))
+
+
+### Bug Fixes
+
+* add cargo workspace ([c7fc918](https://github.com/AngelOnFira/cli/commit/c7fc918b4c2a4a2894f6b2cd9cd433e98a73e402))
+* add concurrency constraint to generated github action ([#226](https://github.com/AngelOnFira/cli/issues/226)) ([8a62d97](https://github.com/AngelOnFira/cli/commit/8a62d97bcea701983df02502f801d4ca8f403eef))
+* add plugin ([c7d1048](https://github.com/AngelOnFira/cli/commit/c7d104825730494524f14cb9facc6f8c0be27dc9))
+* add stuff back ([0faa46d](https://github.com/AngelOnFira/cli/commit/0faa46d7019656003eabb040d77bd9c082a7f4f0))
+* asfea ([1f0541e](https://github.com/AngelOnFira/cli/commit/1f0541e860a545557ff7179b7d71011b0e29b5fd))
+* **backend:** check opengb and deno installation using which crate ([#237](https://github.com/AngelOnFira/cli/issues/237)) ([64b3489](https://github.com/AngelOnFira/cli/commit/64b3489f61206f58299cff59a5583c45b4663bac))
+* cdn.build_env not working ([#208](https://github.com/AngelOnFira/cli/issues/208)) ([214fe29](https://github.com/AngelOnFira/cli/commit/214fe297e612f6e88d06df7f57041be06f44949d))
+* change to relative ([5b691d0](https://github.com/AngelOnFira/cli/commit/5b691d0439532451e0a8dc630d8e92e765776e1b))
+* change to workspace ([7f7d300](https://github.com/AngelOnFira/cli/commit/7f7d30056581d762e5a9fe844ef901b21833385c))
+* **ci:** update ci script to use json-compact instead of json ([#224](https://github.com/AngelOnFira/cli/issues/224)) ([2f04ea3](https://github.com/AngelOnFira/cli/commit/2f04ea3c0639065a10f4b2ecbf4cfc2bf587f353))
+* commea ([79f9c12](https://github.com/AngelOnFira/cli/commit/79f9c126ad2f5d6afad81355f2cfc0c469161d9b))
+* force version ([41c9b75](https://github.com/AngelOnFira/cli/commit/41c9b75f07a8e550e651e364efd0a5d55da7c92c))
+* package location ([f98d978](https://github.com/AngelOnFira/cli/commit/f98d9780881cca7b378a244415fe4e910a3a7215))
+* read_generated_manifest fn name ([#241](https://github.com/AngelOnFira/cli/issues/241)) ([72970c7](https://github.com/AngelOnFira/cli/commit/72970c7240f1dfa19a4fb75a9e009e8bde3799b5))
+* remove old file ([def003c](https://github.com/AngelOnFira/cli/commit/def003c7318d19e5fb0e0c3634f29f3b42ff5c41))
+* rivet exec does not work with --rivet-servers ([#220](https://github.com/AngelOnFira/cli/issues/220)) ([c1d33c5](https://github.com/AngelOnFira/cli/commit/c1d33c5e251d29edd270d9a84a05d37fe39357ee))
+* specify version ([d0da67e](https://github.com/AngelOnFira/cli/commit/d0da67e6aef2f105ef0f3caabc28d6d21bb1698b))
+* temp disable flakey macos test ([#212](https://github.com/AngelOnFira/cli/issues/212)) ([6d1ed9b](https://github.com/AngelOnFira/cli/commit/6d1ed9b87b7aa9cdc249a895c7d5ea47ef9d5be7))
+* test ([f9819c3](https://github.com/AngelOnFira/cli/commit/f9819c3d7ec828cabaccbf30295c65c0b895509c))
+* test rust release ([01d080d](https://github.com/AngelOnFira/cli/commit/01d080d2ead50573902ac264536175ca1bf0df3e))
+* **test:** update region names ([#223](https://github.com/AngelOnFira/cli/issues/223)) ([c605561](https://github.com/AngelOnFira/cli/commit/c605561bdf4b4206b0f367f7dc5e716f1f0f5f76))
+* try a tadsrf ([54ce764](https://github.com/AngelOnFira/cli/commit/54ce764fcea568a926f2235c281c5e3a06cce005))
+* update cargo-release version ([450d25b](https://github.com/AngelOnFira/cli/commit/450d25b060da494a6ec44990b7575772e765db3e))
+* update sdks for opengb ([#233](https://github.com/AngelOnFira/cli/issues/233)) ([7feb70b](https://github.com/AngelOnFira/cli/commit/7feb70b2056d96ac31a69102d8a172ad6c0e0905))
+* update sentry issue url ([#210](https://github.com/AngelOnFira/cli/issues/210)) ([2b928df](https://github.com/AngelOnFira/cli/commit/2b928dfc38f18e7f33865bf8c76614c88c8ce384))
+* **upload:** increase upload buffer size ([#229](https://github.com/AngelOnFira/cli/issues/229)) ([28d9d93](https://github.com/AngelOnFira/cli/commit/28d9d93a9e7d6df959fa2a731c7433febfbe47b0))
+
+
+### Continuous Integration
+
+* explicitly fmt check members ([#242](https://github.com/AngelOnFira/cli/issues/242)) ([f14b17e](https://github.com/AngelOnFira/cli/commit/f14b17ed23a33b34f738975489a92d431dae1c59))
+* ignore failing e2e test ([#243](https://github.com/AngelOnFira/cli/issues/243)) ([242e291](https://github.com/AngelOnFira/cli/commit/242e291db0febec9f70632536d1da39c1293ff30))
+
+
+### Chores
+
+* bump version ([71c215f](https://github.com/AngelOnFira/cli/commit/71c215febeebff27fad0cac1938e4e6663a12cdd))
+* change to 1.3.0 ([c503f07](https://github.com/AngelOnFira/cli/commit/c503f070ff506f9e8c29f58529f284312e7b576f))
+* **main:** release rivet-cli 1.3.0 ([b73f573](https://github.com/AngelOnFira/cli/commit/b73f573555efbe5eff390872c926020c22c90100))
+* **main:** release rivet-cli 1.3.1 ([c216087](https://github.com/AngelOnFira/cli/commit/c2160873bd187be6d9ddc1dbf988af882870f7ee))
+* Release ([b10bc24](https://github.com/AngelOnFira/cli/commit/b10bc2414434bc1a93690ea2948feb52003f4bcd))
+* Release ([6c40a0e](https://github.com/AngelOnFira/cli/commit/6c40a0ea758ba9e845539d2bfc64fcd1bf35b7a9))
+* Release ([e9ff7fc](https://github.com/AngelOnFira/cli/commit/e9ff7fc971969963427e9dc50600c3177bab54f0))
+* remove experimental flag from run & exec commands ([#222](https://github.com/AngelOnFira/cli/issues/222)) ([c9cfae6](https://github.com/AngelOnFira/cli/commit/c9cfae60971e465c7fde5e50be654daa49a5abfd))
+* rename --rivet-servers to --server & --this-machine to --dev ([#221](https://github.com/AngelOnFira/cli/issues/221)) ([0f47917](https://github.com/AngelOnFira/cli/commit/0f479176a496c123035eb679c68d164fdbbdb354))
+* update docker root user help link ([#214](https://github.com/AngelOnFira/cli/issues/214)) ([30fdc56](https://github.com/AngelOnFira/cli/commit/30fdc56adb2c686496a7ded0406c2bb2255691d5))
+* update rivet-api ([#209](https://github.com/AngelOnFira/cli/issues/209)) ([b057d00](https://github.com/AngelOnFira/cli/commit/b057d00c0fc897b9f663a55c4aff8845685745c4))
+
 ## [1.3.1](https://github.com/AngelOnFira/cli/compare/rivet-cli-v1.3.0...rivet-cli-v1.3.1) (2024-05-28)
 
 
