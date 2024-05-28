@@ -1,11 +1,8 @@
 {
-	"plugins": ["cargo-workspace"],
 	"commit-search-depth": 50,
 	"packages": {
 		".": {
-			"release-type": "rust",
-			"changelog-path": "/CHANGELOG.md",
-            "pull-request-title-pattern": "chore(${scope}): release ${component} version ${version}"
+			"release-type": "simple"
 		}
 	},
 	"changelog-sections": [
