@@ -1,0 +1,39 @@
+name: Release
+
+permissions:
+  contents: write
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  update_issue_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find and update issue labels
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const oldLabel = 'autorelease: pending'
+            const newLabel = 'autorelease: tagged'
+
+            const issues = await github.paginate(github.issues.listForRepo, {
+              owner,
+              repo,
+              labels: oldLabel,
+              state: 'open'
+            })
+
+            for (const issue of issues) {
+              await github.issues.update({
+                owner,
+                repo,
+                issue_number: issue.number,
+                labels: issue.labels
+                  .map(label => label.name)
+                  .filter(labelName => labelName !== oldLabel)
+                  .concat(newLabel)
+              })
+            }
