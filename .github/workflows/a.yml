@@ -4,25 +4,25 @@ permissions:
   contents: write
 
 on: 
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   update_issue_labels:
     runs-on: ubuntu-latest
     steps:
       - name: Find and update issue labels
-        uses: actions/github-script@v5
+        uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo
             const oldLabel = 'autorelease: pending'
             const newLabel = 'autorelease: tagged'
 
-            const issues = await github.paginate(github.issues.listForRepo, {
-              owner,
-              repo,
-              labels: oldLabel,
-              state: 'open'
+            const issues = await github.search.issuesAndPullRequests({
+              q: `repo:${owner}/${repo} is:open label:"${oldLabel}"`,
+              per_page: 100
             })
 
             for (const issue of issues) {
