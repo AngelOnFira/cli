@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0](https://github.com/AngelOnFira/cli/compare/v1.2.0...v1.3.0) (2024-05-29)
+
+
+### Features
+
+* get lobby and logs links in sidekick ([#235](https://github.com/AngelOnFira/cli/issues/235)) ([7c63efd](https://github.com/AngelOnFira/cli/commit/7c63efd86a2ca4a659b0df8c88b3764f904f2938))
+* simplify ([69cdf27](https://github.com/AngelOnFira/cli/commit/69cdf277d75d16e04ffa009306a85b09e2a384a6))
+
+
+### Bug Fixes
+
+* changelog limit ([83c3d0e](https://github.com/AngelOnFira/cli/commit/83c3d0e298e9e63a627755a0b305a09c35e93a2a))
+* prevent asking user for terminal permissions ([#236](https://github.com/AngelOnFira/cli/issues/236)) ([a1a75d8](https://github.com/AngelOnFira/cli/commit/a1a75d858a99ab3830ed14917a26e8f06f446c4f))
+* reading byte-order marks on Windows ([#238](https://github.com/AngelOnFira/cli/issues/238)) ([e177ad4](https://github.com/AngelOnFira/cli/commit/e177ad4917945f6c99b8cd2f03c35bec3ba91941))
+
 ## [1.2.0](https://github.com/rivet-gg/cli/compare/v1.1.0...v1.2.0) (2024-05-28)
 
 
