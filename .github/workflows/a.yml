@@ -1,11 +1,10 @@
-name: Release
+name: Rename
 
 permissions:
   contents: write
 
-on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+on: 
+  workflow_dispatch:
 
 jobs:
   update_issue_labels:
