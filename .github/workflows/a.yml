@@ -25,8 +25,8 @@ jobs:
               per_page: 100
             })
 
-            for (const issue of issues) {
-              await github.issues.update({
+            for (const issue of issues.data.items) {
+              await github.rest.issues.update({
                 owner,
                 repo,
                 issue_number: issue.number,
