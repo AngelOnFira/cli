@@ -20,7 +20,7 @@ jobs:
             const oldLabel = 'autorelease: pending'
             const newLabel = 'autorelease: tagged'
 
-            const issues = await github.search.issuesAndPullRequests({
+            const issues = await github.rest.search.issuesAndPullRequests({
               q: `repo:${owner}/${repo} is:open label:"${oldLabel}"`,
               per_page: 100
             })
